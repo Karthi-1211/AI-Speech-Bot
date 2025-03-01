@@ -10,7 +10,7 @@ const app = express();
 const port = process.env.PORT || 5005;
 
 // Google Gemini API Configuration
-const genAI = new GoogleGenerativeAI('your api key'); // Replace with your Gemini API key
+const genAI = new GoogleGenerativeAI('AIzaSyDDZpD7G4gooItnpRHF-4TdHlZ5YFZIV1k'); // Replace with your Gemini API key
 
 // Middleware to serve static files
 app.use(express.static(__dirname + '/views')); // html
