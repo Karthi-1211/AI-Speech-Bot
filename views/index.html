@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Simple AI Chat Bot Demo with Web Speech API">
+    <title>BK Technologix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="nav-text">Welcome to AI Speech Chat Bot</div>
+      <h1><b><i>BK Technologix</i></b></h1>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#contact">About</a></li>
+        <li><a href="#contact">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#feedbackForm">Feedback</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h1>AI Speech Bot</h1>
+      <h2>with Web Speech API</h2>
+
+      <button id="mic-button"><i class="fa fa-microphone"></i></button>
+      <button id="stop-button" class="stop-button"><i class="fa fa-stop"></i></button>
+
+      <div>
+          <p>You said: <em class="output-you">...</em></p>
+          <p>Bot replied: <em class="output-bot">...</em></p>
+      </div>
+
+      <div class="loader" id="loader"></div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section class="feedback-form">
+      <h2>Feedback Form</h2>
+      <form action="https://api.web3forms.com/submit" method="POST" id="feedbackForm">
+        <input type="hidden" name="access_key" value="764ec9a4-f4f7-4da3-8eb6-2cb0f0e6a61d">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <footer id="contact">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About</h3>
+          <p>An AI Speech Bot using the Web Speech API enables hands-free interaction through speech recognition and text-to-speech technology. It listens, processes queries with NLP, and responds in real time, making it ideal for virtual assistants, customer support, and interactive learning 🚀.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email:balukarthik1308@gmail.com</p>
+          <p>Follow me:</p>
+          <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://twitter.com/yourusername" target="_blank"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Alamanda Balu Karthik. All rights reserved. | Powered by <a href="https://bkTechnologix.com/" target="_blank">BK Technologix</a></p>
+      </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

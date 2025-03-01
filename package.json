@@ -1,0 +1,26 @@
+{
+  "name": "web-speech-ai",
+  "version": "1.0.0",
+  "description": "AI Chat Bot with Web Speech API",
+  "keywords": [],
+  "license": "",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.22.0",
+    "apiai": "^4.0.3",
+    "axios": "^1.8.1",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.6",
+    "express": "^4.21.2",
+    "openai": "^4.85.4",
+    "socket.io": "^4.8.1",
+    "socketio": "^1.0.0",
+    "uuid": "^11.1.0"
+  }
+}
