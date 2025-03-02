@@ -24,10 +24,9 @@ Welcome to **AI Speech Bot**, a hands-free interactive chatbot powered by the **
 ---
 
 ## 🎥 Demo
-🔗 [Live Demo](https://yourwebsite.com/) *(Replace with your actual hosted link)*  
+🔗 [Live Demo](SpeechBot.mp4)  
 
-![AI Speech Bot][Screenshot 2025-03-02 114042](https://github.com/user-attachments/assets/40d6e1fe-b957-402e-9590-b795f36f9f53)
-ng) *(Replace with an actual preview image URL)*  
+🔗 [AI Speech Bot](SpeechBot.png)  
 
 ---
 
