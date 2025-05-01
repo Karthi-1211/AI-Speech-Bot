@@ -18,7 +18,10 @@ app.use(express.static(__dirname + '/public')); // js, css, images
 
 // Start the server
 const server = app.listen(port, () => {
+  const host = server.address().address === '::' ? 'localhost' : server.address().address;
+  const url = `http://${host}:${server.address().port}`;
   console.log(`Express server listening on port ${server.address().port}`);
+  console.log(`Open the project at: ${url}`);
 });
 
 // Setup Socket.io
