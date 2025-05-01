@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Luxury AI Speech Chat Bot with Web Speech API">
+  <title>BK Technologix - AI Speech Bot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Futura&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h1>BK Technologix</h1>
+      <p>Revolutionary AI Speech Solutions</p>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#features" class="nav-link">Features</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="#feedback" class="nav-link">Feedback</a></li>
+    </ul>
+    <div class="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>AI Speech Bot</h1>
+      <p>Experience the future of voice interaction with unparalleled AI precision</p>
+      <div class="chat-container">
+        <div class="chat-controls">
+          <button id="mic-button" class="action-button mic-button">
+            <i class="fas fa-microphone"></i>
+          </button>
+          <button id="stop-button" class="action-button stop-button" disabled>
+            <i class="fas fa-stop"></i>
+          </button>
+        </div>
+        <div class="chat-output">
+          <div class="output-card">
+            <p class="output-label">Your Voice:</p>
+            <p class="output-you">...</p>
+          </div>
+          <div class="output-card">
+            <p class="output-label">AI Response:</p>
+            <p class="output-bot">...</p>
+          </div>
+          <div class="loader" id="loader"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-background">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <h2>About BK Technologix</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>At BK Technologix, we're revolutionizing human-AI interaction through cutting-edge speech technology. Our mission is to create seamless, intuitive, and powerful voice interfaces that enhance productivity and accessibility for everyone.</p>
+        <p>Founded by a passionate team of AI enthusiasts and speech technology experts, we blend innovation with practical solutions to deliver exceptional user experiences that push the boundaries of what's possible.</p>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1684369175833-4b445ad6bfb5?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About BK Technologix">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" id="features">
+    <h2>Our Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-image-container">
+          <img src="https://images.unsplash.com/photo-1718664485559-9ae16a7a01b1?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Voice Recognition">
+        </div>
+        <h3>Advanced Voice Recognition</h3>
+        <p>Our AI-powered speech recognition delivers unparalleled accuracy across multiple languages and accents.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-image-container">
+          <img src="https://plus.unsplash.com/premium_photo-1726079247110-5e593660c7b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Real-time Processing">
+        </div>
+        <h3>Real-time Processing</h3>
+        <p>Experience instant responses with our high-speed processing capabilities, ensuring smooth conversations.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-image-container">
+          <img src="https://plus.unsplash.com/premium_photo-1682124651258-410b25fa9dc0?q=80&w=1921&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Customizable AI">
+        </div>
+        <h3>Customizable AI</h3>
+        <p>Tailor the AI's responses and behavior to suit your specific needs and preferences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback Section -->
+  <section class="feedback-section" id="feedback">
+    <h2>Your Feedback Shapes Our Future</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" id="feedbackForm" class="feedback-form">
+      <input type="hidden" name="access_key" value="764ec9a4-f4f7-4da3-8eb6-2cb0f0e6a61d">
+      <input type="hidden" name="subject" value="AI Speech Bot">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="submit-button">Submit Feedback</button>
+      <div id="feedback-message" class="feedback-message" style="display: none;"></div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>BK Technologix redefines human-AI interaction with cutting-edge speech technology.</p>
+        <div class="social-links">
+          <a href="https://github.com/Karthi-1211/" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/balu-karthik/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#terms">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:support@bkTechnologix.com">balukarthik1308@gmail.com</a></p>
+        <p>Phone: +91 9515607788</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 BK Technologix. All rights reserved. | Powered by <a href="https://bkTechnologix.com/" target="_blank">BK Technologix</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
